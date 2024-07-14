@@ -28,7 +28,7 @@ const Jobs = () => {
                     ))}
                 </div>
 
-                <div className={show === jobs.length ? 'hidden' : ''}>
+                <div className={show === jobs.length && 'hidden'}>
                     <button
                         onClick={() => setShow(jobs.length)}
                         className="btn-neutral btn text-center px-10 mt-5">
