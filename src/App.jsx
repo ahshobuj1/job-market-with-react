@@ -1,7 +1,15 @@
+import {Outlet} from 'react-router-dom';
+import Footer from './layout/footer/Footer';
+import NabVar from './layout/header/NabVar';
+
 function App() {
     return (
         <>
-            <h1>hello</h1>
+            <NabVar />
+            <div className="max-w-7xl mx-auto">
+                <Outlet />
+            </div>
+            <Footer />
         </>
     );
 }

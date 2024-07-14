@@ -3,11 +3,41 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Home from './components/home/Home.jsx';
+import Jobs from './components/jobs/Jobs.jsx';
+import Error from './components/errors/Error.jsx';
+import AppliedJobs from './pages/appliedJobs/AppliedJobs.jsx';
+import Blogs from './pages/blogs/Blogs.jsx';
+import Statistics from './pages/statistics/Statistics.jsx';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <Error />,
+        children: [
+            {
+                path: '/',
+                element: <Home />,
+            },
+            {
+                path: '/jobs',
+                //loader: fetch('data/categories.json'),
+                element: <Jobs />,
+            },
+            {
+                path: '/applied',
+                element: <AppliedJobs />,
+            },
+            {
+                path: '/blogs',
+                element: <Blogs />,
+            },
+            {
+                path: '/statistics',
+                element: <Statistics />,
+            },
+        ],
     },
 ]);
 
