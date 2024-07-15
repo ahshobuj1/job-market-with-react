@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import {useLoaderData, useNavigate, useParams} from 'react-router-dom';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,8 +28,8 @@ const JobDetails = () => {
     } = findJobs;
 
     return (
-        <section>
-            <h1 className="text-center text-5xl font-bold my-12 text-red-500 italic">
+        <section className="p-5">
+            <h1 className="text-center text-5xl font-bold  my-12 text-red-500 italic">
                 Job Details of {job_title}
             </h1>
 

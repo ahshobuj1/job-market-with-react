@@ -9,9 +9,12 @@ const getStoredValueFromLocalStorage = () => {
 
 const setToLocalStorageId = (id) => {
     const value = getStoredValueFromLocalStorage();
-    const setId = [...value, id];
-    const setValue = JSON.stringify(setId);
-    localStorage.setItem('job-id', setValue);
+
+    if (!value === id) {
+        const setId = [...value, id];
+        const setValue = JSON.stringify(setId);
+        localStorage.setItem('job-id', setValue);
+    }
 };
 
 export {setToLocalStorageId, getStoredValueFromLocalStorage};
