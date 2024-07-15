@@ -1,12 +1,13 @@
-import {useEffect, useState} from 'react';
 import {useLoaderData, useNavigate, useParams} from 'react-router-dom';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {setToLocalStorageId} from '../../localStorage/LocalStorage';
+import {setLocalStorage} from '../../localStorage/LocalStorage';
 
 const handleApplyNow = (id) => {
     toast('Saved to Applied Job...');
-    setToLocalStorageId(id);
+    //setToLocalStorageId(id);
+    //set(id);
+    setLocalStorage(id);
 };
 
 const JobDetails = () => {
