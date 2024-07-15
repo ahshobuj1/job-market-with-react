@@ -3,7 +3,6 @@ import Job from '../job/Job';
 
 const Jobs = () => {
     const [jobs, setJobs] = useState([]);
-
     const [show, setShow] = useState(4);
 
     useEffect(() => {
@@ -12,7 +11,6 @@ const Jobs = () => {
             .then((data) => setJobs(data));
     }, []);
 
-    console.log(jobs);
     return (
         <section>
             <div className="text-center my-10">

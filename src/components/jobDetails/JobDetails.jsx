@@ -5,8 +5,6 @@ import {setLocalStorage} from '../../localStorage/LocalStorage';
 
 const handleApplyNow = (id) => {
     toast('Saved to Applied Job...');
-    //setToLocalStorageId(id);
-    //set(id);
     setLocalStorage(id);
 };
 
